@@ -10,5 +10,17 @@ class SkillsController < ApplicationController
   end
 
 
+  def create
+    @skill = Skill.new(
+    name: params[:name],
+    user_id: params[:user_id])
+    if @skill.save
+      render json: @skill
+    else
+      render json: @skill.errors
+    end
+  end
+
+
 
 end

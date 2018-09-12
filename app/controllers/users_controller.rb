@@ -21,4 +21,18 @@ class UsersController < ApplicationController
         render json: @user.errors
       end
   end
+
+  # def thank
+  #   @user=User.find(params[:id])
+  #   @user.thanks++
+  #   @user.save
+  # end
+
+  
+
+  def list_rating
+    ratingList= Users.all.select{|user| user.rating}
+    ratingList.map{|rating| rating}
+end
+
 end
