@@ -21,4 +21,10 @@ class UsersController < ApplicationController
         render json: @user.errors
       end
   end
+
+  # def thank
+  #   @user=User.find(params[:id])
+  #   @user.thanks++
+  #   @user.save
+  # end
 end

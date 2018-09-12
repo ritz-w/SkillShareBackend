@@ -1,3 +1,3 @@
 class SkillSerializer < ActiveModel::Serializer
-  attributes :id, :name, :rating
+  attributes :id, :name
 end

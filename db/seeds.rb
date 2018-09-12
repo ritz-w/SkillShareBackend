@@ -12,10 +12,11 @@ Skill.destroy_all
 UserSkill.destroy_all
 
 users= [
-  {name: 'Ritz', email: 'ritz@gmail.com', mod_name: 'Module 3', slack_username: 'Ritz1'},
-  {name: 'Ramona', email: 'ramona@gmail.com', mod_name: 'Module 3', slack_username: 'Ram'},
-  {name: 'Sarah', email: 'sarah@gmail.com', mod_name: 'Module 3', slack_username: 'Sarah'},
-  {name: 'Luoana', email: 'luoana@gmail.com', mod_name: 'Module 3', slack_username: 'luoana'}
+  {name: 'Ritz', email: 'ritz@gmail.com', mod_name: '071618', slack_username: 'Ritz1'},
+  {name: 'Ramona', email: 'ramona@gmail.com', mod_name: '071618', slack_username: 'Ram'},
+  {name: 'Sarah', email: 'sarah@gmail.com', mod_name: '071618', slack_username: 'Sarah'},
+  {name: 'Luoana', email: 'luoana@gmail.com', mod_name: '071618', slack_username: 'luoana'}
+  {name: 'Gabriel', email: 'gabriel@gmail.com', mod_name: '060418', slack_username: 'gabriel'}
 ]
 users.each{|user_data| User.create(user_data)}
 
