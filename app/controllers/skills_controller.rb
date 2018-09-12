@@ -1,4 +1,5 @@
 class SkillsController < ApplicationController
+
   def index
     @skills = Skill.all
     render json: @skills
@@ -8,7 +9,6 @@ class SkillsController < ApplicationController
     @skill = Skill.find(params[:id])
       render json: @skill
   end
-
 
   def create
     @skill = Skill.new(
