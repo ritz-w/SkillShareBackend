@@ -6,6 +6,7 @@ resources :skills, only: [:index, :create, :show]
 resources :user_skills, only: [:index, :update, :create]
 
 # patch "/user_skills/:id", to: "user_skills#update"
+get "/user_skills/:skill_id/:user_id", to: "user_skills#filterSkills"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
 
