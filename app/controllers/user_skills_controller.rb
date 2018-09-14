@@ -6,13 +6,16 @@ def index
 end
 
   def create
-    @user_skill = UserSkill.new(
+    @user_skill = UserSkill.create(
       user_id: params[:user_id],
       skill_id: params[:skill_id],
       rating: params[:rating]
     )
-    @user_skill.save
-    render json: @user_skill
+    if @user.save
+      render json: @user_skill
+    else
+      render json: @user_skill.errors
+    end
   end
 
   def update

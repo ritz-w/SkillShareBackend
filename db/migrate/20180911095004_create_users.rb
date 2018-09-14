@@ -4,11 +4,10 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :email
       t.string :mod_name
-      t.string :slack_username
+      t.string :tagline
 
       t.timestamps
     end
     add_index :users, :email, unique: true
-    add_index :users, :slack_username, unique: true
   end
 end

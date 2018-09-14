@@ -35,11 +35,10 @@ ActiveRecord::Schema.define(version: 2018_09_11_113014) do
     t.string "name"
     t.string "email"
     t.string "mod_name"
-    t.string "slack_username"
+    t.string "tagline"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["slack_username"], name: "index_users_on_slack_username", unique: true
   end
 
   add_foreign_key "user_skills", "skills"

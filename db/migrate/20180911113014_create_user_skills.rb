@@ -4,7 +4,6 @@ class CreateUserSkills < ActiveRecord::Migration[5.2]
       t.integer :rating
       t.belongs_to :user, foreign_key: true
       t.belongs_to :skill, foreign_key: true
-
       t.timestamps
     end
   end
