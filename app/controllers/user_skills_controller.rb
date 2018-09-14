@@ -23,4 +23,10 @@ end
     @user_skill.update(rating: params[:rating])
     render json: @user_skill
   end
+
+  def filterSkills
+    @rating = User.find(params[:user_id]).user_skills.find_by(skill_id: params[:skill_id])[:rating]
+    @user_skills = UserSkill.UsersSkillsOverX(skill_id: params[:skill_id], skill_rating: @rating)
+    render json: @user_skills
+  end
 end
